@@ -862,6 +862,82 @@
             <param name="embbededresourceName"></param>
             <returns></returns>
         </member>
+        <member name="T:ADTool.Ftp.FtpClient.FtpClient">
+            <summary>
+            Class to access and perform operation on FTP server
+            </summary>
+        </member>
+        <member name="F:ADTool.Ftp.FtpClient.FtpClient.connection">
+            <summary>
+            Data connection
+            </summary>
+        </member>
+        <member name="F:ADTool.Ftp.FtpClient.FtpClient._FTPClient">
+            <summary>
+            Client FTP
+            </summary>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.#ctor(ADTool.Data.DataConnection)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="connection"> Data connection FTP</param>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.DirectoryExists(System.String)">
+            <summary>
+            Check if remote directory exists directory
+            </summary>
+            <param name="remotePath">Remote absolute path directory</param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.CreateDirectory(System.String)">
+            <summary>
+            Create directory in FTP Server
+            </summary>
+            <param name="remotePath">Remote absolute path directory</param>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.GetListFullName(System.String)">
+            <summary>
+            Get list full name item inside remote folder
+            </summary>
+            <param name="remotePath">Remote absolute path directory</param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.RemoveFileOnFTPServer(System.String)">
+            <summary>
+            Remove File on FTP server
+            </summary>
+            <param name="pathFileOnFTP">absolute path where is the file to remove</param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.UploadFile(System.String,System.String)">
+            <summary>
+            Upload file on FTP server and retry 3 times before giving up
+            </summary>
+            <param name="sourcePath">source path file</param>
+            <param name="destinationPath">destination path file</param>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.Connecte">
+            <summary>
+            Active FTP client
+            </summary>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.Disconnect">
+            <summary>
+            Disconnect FTP client and free memory used
+            </summary>
+        </member>
+        <member name="M:ADTool.Ftp.FtpClient.FtpClient.IsActiveFTPClient">
+            <summary>
+            Check if FTP client is connected yet
+            </summary>
+            <returns>boolean value to know if still we're connected to FTP server</returns>
+        </member>
+        <member name="P:ADTool.Ftp.FtpClient.FtpClient.Connection">
+            <summary>
+            Get or Set connection FTP server object
+            </summary>
+        </member>
         <member name="P:ADTool.Log.ILog.IdLog">
             <summary>
             Field to identified a log

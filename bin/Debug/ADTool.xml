@@ -1199,6 +1199,13 @@
             <param name="section"></param>
             <returns></returns>
         </member>
+        <member name="M:ADTool.AppSetting.AppSetting.GetConnectionString(System.String)">
+            <summary>
+            Get connection string from Web.Config
+            </summary>
+            <param name="nameConnection"></param>
+            <returns></returns>
+        </member>
         <member name="T:ADTool.Serializer.JsonSerializer">
             <summary>
             Clase para la serialización/deserialización en JSON

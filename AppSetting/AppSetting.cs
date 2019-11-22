@@ -62,5 +62,15 @@ namespace ADTool.AppSetting
             return settings;
         }
 
+        /// <summary>
+        /// Get connection string from Web.Config
+        /// </summary>
+        /// <param name="nameConnection"></param>
+        /// <returns></returns>
+        public static string GetConnectionString(string nameConnection) 
+        {
+            return System.Configuration.ConfigurationManager.ConnectionStrings[nameConnection].ConnectionString;
+        }
+
     }
 }
