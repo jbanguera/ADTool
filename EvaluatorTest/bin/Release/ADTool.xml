@@ -1,0 +1,1366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ADTool</name>
+    </assembly>
+    <members>
+        <member name="T:ADTool.Data.DataConnection">
+            <summary>
+            Clase con las propiedades de una conexión
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.ConnectionName">
+            <summary>
+            Connection name
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.ServerName">
+            <summary>
+            Server name
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.Catalog">
+            <summary>
+            Catalog
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.Database">
+            <summary>
+            Catalog
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.Port">
+            <summary>
+            Port
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.SslMode">
+            <summary>
+            Mode Ssl
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.IntegratedSecurity">
+            <summary>
+            Integrated Security
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.ConnectionTimeOut">
+            <summary>
+            Connection Time Out
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.User">
+            <summary>
+            Name user
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.Password">
+            <summary>
+            Encrypt password
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.PersistSecurity">
+            <summary>
+            Value Persist Security
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.ConnectionStringForSql">
+            <summary>
+            Value Connection String
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DataConnection.ConnectionStringForMySql">
+            <summary>
+            Value Connection String
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DataConnection.GetConnectionStringForSql">
+            <summary>
+            Get the connection For SQL Server
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DataConnection.GetConnectionStringForMySql">
+            <summary>
+            Get the connection for MySQL Server
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="F:ADTool.Data.DataConnectionTypeProviderEnum.MSSQL">
+            <summary>
+            Identify to MySQL Server provider
+            </summary>
+        </member>
+        <member name="F:ADTool.Data.DataConnectionTypeProviderEnum.MYSQL">
+            <summary>
+            /// Identify to SQL Server provider
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.ConnectionName">
+            <summary>
+            Field to know the connection name
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.ServerName">
+            <summary>
+            Field to know the server name
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.Catalog">
+            <summary>
+            Field to know the catalog
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.Database">
+            <summary>
+            Field to know the catalog
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.Port">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.SslMode">
+            <summary>
+            Ssl Mode
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.ConnectionTimeOut">
+            <summary>
+            Connection Time out
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.IntegratedSecurity">
+            <summary>
+            Field to know the IntegratedSecurity
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.User">
+            <summary>
+            Field to know User
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.Password">
+            <summary>
+            Field to know password user
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.PersistSecurity">
+            <summary>
+            Field to know persist security
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.ConnectionStringForSql">
+            <summary>
+            Field to know the connection string for SQL Server
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.IDataConnection.ConnectionStringForMySql">
+            <summary>
+            Field to know the connection string for MySQL
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.IDataConnection.GetConnectionStringForSql">
+            <summary>
+            Get the connection for SQL Server
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.IDataConnection.GetConnectionStringForMySql">
+            <summary>
+            Get the connection for MYSQL Server
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.#ctor">
+            <summary>
+            Constructor <see langword="class " cref="T:ADTool.Data.DapperClient.DapperManager"/>
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.ThereIsConectivity(ADTool.Data.DapperClient.DapperModel)">
+            <summary>
+            
+            </summary>
+            <param name="dapperModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Query``1(System.String,System.String,System.Object)">
+            <summary>
+            Execute Select statement and return <see langword="T"/> object mapping the column table with <see langword="T"/> object properties.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connectionString"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Query``1(System.Data.SqlClient.SqlConnection,System.String,System.Object)">
+            <summary>
+            Execute Select statement and return <see langword="T"/> object mapping the column table with <see langword="T"/> object properties.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Connection"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Query``1(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Execute Select statement and return <see langword="T"/> object mapping the column table with <see langword="T"/> object properties.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Query(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Execute statement select on DB and return anonymous result
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.QueryFirstOrDefault``1(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Execute statement select on DB and return first or default anonymous result
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Insert(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Insert DB row 
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Update(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Update DB row
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Execute(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Execute any statement
+            </summary>
+            <param name="dapperModel"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Delete(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Delete DB row 
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.StorageProcedure(ADTool.Data.DapperClient.DapperModel,System.String,System.Object)">
+            <summary>
+            Delete DB row 
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Finalize">
+            <summary>
+            DatabaseController Destructor
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Dispose">
+            <summary>
+            DatabaseController Destructor
+            </summary>
+            <summary>
+            Dispose the DDBB.
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Dispose(System.Boolean)">
+            <summary>
+            Virtual dispose the DDBB.
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.QueryMultiple(ADTool.Data.DapperClient.DapperModel,System.Collections.Generic.List{System.String},System.Object)">
+            <summary>
+            Execute many diference sql statement on DB. 
+            </summary>
+            <param name="queries"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperManager.Transaction(ADTool.Data.DapperClient.DapperModel,System.Collections.Generic.Dictionary{System.Int32,System.String},System.Collections.Generic.Dictionary{System.Int32,System.Object})">
+            <summary>
+            Execute the queries in a transaction. The queries and parameters must have the same Dictionary Key.
+            </summary>
+            <param name="sqls"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Data.SqlClient.SqlException"></exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ADTool.Data.DapperClient.DapperManager.Query``3(ADTool.Data.DapperClient.DapperModel,System.String,System.Func{``0,``1,``2},System.Object,System.Boolean,System.String,System.Nullable{System.Data.CommandType})" -->
+        <member name="M:ADTool.Data.DapperClient.DapperManager.BuildConnectionString(System.String,System.String,System.String)">
+            <summary>
+            Build the DDBB connection string BD.
+            </summary>
+            <returns>The DDBB connection string.</returns>
+        </member>
+        <member name="T:ADTool.Data.DapperClient.DapperModel">
+            <summary>
+            Class <see cref="T:ADTool.Data.DapperClient.DapperModel"></see> is used for access to Database Engine and manage it. 
+            You must use this class with the <seealso cref="T:ADTool.Data.DapperClient.DapperManager"></seealso> instance.
+            <para>This class use the Dapper ORM for access to database provaiders. </para>
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.#ctor">
+            <summary>
+            Constructor <see langword="class " cref="T:ADTool.Data.DapperClient.DapperModel"/>
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.#ctor(System.Data.IDbConnection)">
+            <summary>
+            Constructor <see langword="class " cref="T:ADTool.Data.DapperClient.DapperModel"/>
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.#ctor(System.String,ADTool.Data.DataConnectionTypeProviderEnum)">
+            <summary>
+            Constructor <see langword="class " cref="T:ADTool.Data.DapperClient.DapperModel"/>
+            </summary>
+            <param name="connectionString"></param>
+            <param name="typeProviderEnum"></param>
+        </member>
+        <member name="P:ADTool.Data.DapperClient.DapperModel.IsOpen">
+            <summary>
+            Is DatabaseModel Open
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Open">
+            <summary>
+            Open the DDBB.
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Close">
+            <summary>
+            Close the DDBB.
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.ThereIsConectivity">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Query``1(System.String,System.String,System.Object,System.Boolean)">
+            <summary>
+            Execute query using a new connection with param
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connectionString"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Query``1(System.Data.SqlClient.SqlConnection,System.String,System.Object,System.Boolean)">
+            <summary>
+            Execute query using connection passed by parameter with parameters
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Connection"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.CheckAndSetConnectionStringForConnection">
+            <summary>
+            Check the property this.connectionString with property this.connection.ConnectionString are equal, if they are different then 
+             this.connection.ConnectionString = this.connectionString
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Query``1(System.String,System.Object,System.Boolean)">
+            <summary>
+            Execute query with parameters
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Query(System.String,System.Object,System.Boolean)">
+            <summary>
+            Execute statement select on DB and return anonymous result
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.QueryFirstOrDefault``1(System.String,System.Object)">
+            <summary>
+            Execute statement select on DB and return first or default anonymous result
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Execute(System.String,System.Object,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Execute someone insert, delete or update statement DB
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Execute(System.String,System.String,System.Object,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Execute someone insert, delete or update statement DB
+            </summary>
+            <param name="connectionString"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Execute(System.Data.SqlClient.SqlConnection,System.String,System.Object,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Execute someone insert, delete or update statement DB
+            </summary>
+            <param name="Connection"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Finalize">
+            <summary>
+            DatabaseModel Destructor
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Dispose">
+            <summary>
+            Dispose the DDBB.
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Dispose(System.Boolean)">
+            <summary>
+            Virtual dispose the DDBB.
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.QueryMultiple(System.Collections.Generic.IEnumerable{System.String},System.Object)">
+            <summary>
+            Eecute many sql statement on DB.
+            </summary>
+            <param name="queries"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.Transaction(System.Collections.Generic.IEnumerable{ADTool.Data.DapperClient.DapperSimpleQuery})">
+            <summary>
+            Execute a transaction on DB. 
+            <para>The parameter is a <see langword="internal struct " cref="T:ADTool.Data.DapperClient.DapperSimpleQuery"/>.</para>
+            </summary>
+            <param name="sqls"></param>
+            <returns></returns>
+            <exception cref="T:System.Data.SqlClient.SqlException"></exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ADTool.Data.DapperClient.DapperModel.Query``3(System.String,System.Func{``0,``1,``2},System.Object,System.Boolean,System.String,System.Nullable{System.Data.CommandType})" -->
+        <member name="M:ADTool.Data.DapperClient.DapperModel.State">
+            <summary>
+            Get state of DB connection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperModel.DatabaseName">
+            <summary>
+            Get database's name.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ADTool.Data.DapperClient.DapperModel.ConnectionString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DapperClient.DapperModel.Connection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ADTool.Data.DapperClient.DapperSimpleQuery.#ctor(System.String,System.Object)">
+            <summary>
+            Constructor <see langword="struct " cref="T:ADTool.Data.DapperClient.DapperSimpleQuery"/>.
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+        </member>
+        <member name="P:ADTool.Data.DapperClient.DapperSimpleQuery.Sql">
+            <summary>
+            Get and Set sql property.
+            </summary>
+        </member>
+        <member name="P:ADTool.Data.DapperClient.DapperSimpleQuery.Param">
+            <summary>
+            Get and Set param property.
+            </summary>
+        </member>
+        <member name="M:ADTool.Encryption.CryptLib.Encrypt(System.String)">
+             This function encrypts the plain text to cipher text using the key
+             provided. You'll have to use the same key for decryption
+            
+             @param plainText
+                        Plain text to be encrypted
+             @return returns encrypted (cipher) text
+        </member>
+        <member name="M:ADTool.Encryption.CryptLib.Encrypt(System.String,System.String,System.String)">
+             This function encrypts the plain text to cipher text using the key
+             provided. You'll have to use the same key for decryption
+            
+             @param plainText
+                        Plain text to be encrypted
+             @param key
+                        Encryption Key. You'll have to use the same key for decryption
+             @return returns encrypted (cipher) text
+        </member>
+        <member name="M:ADTool.Encryption.CryptLib.EncryptDecrypt(System.String,System.String,ADTool.Encryption.CryptLib.EncryptMode,System.String)">
+            
+             @param inputText
+                        Text to be encrypted or decrypted
+             @param encryptionKey
+                        Encryption key to used for encryption / decryption
+             @param mode
+                        specify the mode encryption / decryption
+             @param initVector
+             			  initialization vector
+             @return encrypted or decrypted string based on the mode
+        </member>
+        <member name="M:ADTool.Encryption.CryptLib.GenerateRandomIV(System.Int32)">
+             This function generates random string of the given input length.
+            
+             @param plainText
+                        Plain text to be encrypted
+             @param key
+                        Encryption Key. You'll have to use the same key for decryption
+             @return returns encrypted (cipher) text
+        </member>
+        <member name="P:ADTool.Environment.IEnvironment.EnvironmentName">
+            <summary>
+            Fied to know Environment name
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.IEnvironment.ActiveEnvironment">
+            <summary>
+            Field to know if Environment is active
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.IEnvironment.DataEnvironmentType">
+            <summary>
+            Field to know the type of Environment, the types are <see cref="T:ADTool.Environment.DataEnvironmentTypeEnum"></see>
+            </summary>
+        </member>
+        <member name="T:ADTool.Environment.EnvironmentTest">
+            <summary>
+            Enviroment class test
+            </summary>
+        </member>
+        <member name="M:ADTool.Environment.EnvironmentTest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.EnvironmentName">
+            <summary>
+            Nombre del entorno
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.ActiveEnvironment">
+            <summary>
+            Indica si el entorno es activo o no
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.DataEnvironmentType">
+            <summary>
+            Indica el tipo de entorno
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.Connections">
+            <summary>
+            Lista con las distintas conexiones del entorno
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.FTPEDIFiles">
+            <summary>
+            Direccion FTP de archivos EDI
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.DecimalSeparatorFTPEDIFiles">
+            <summary>
+            Separador de decimales de EDI
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.OrderFolderFTPEDIFiles">
+            <summary>
+            Order Folder FTP de archivos EDI
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.InvoicFolderFTPEDIFiles">
+            <summary>
+            Invoic Folder FTP de archivos EDI
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.WorkingFolderOrderFTPEDIFiles">
+            <summary>
+            Working Folder FTP de archivos EDI Order
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.WorkingFolderInvoicFTPEDIFiles">
+            <summary>
+            Processed Folder FTP de archivos EDI Order
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.UserFTPEDIFiles">
+            <summary>
+            User FTP de archivos EDI
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentTest.PasswordFTPEDIFiles">
+            <summary>
+            Password FTP de archivos EDI
+            </summary>
+        </member>
+        <member name="M:ADTool.Environment.EnvironmentTest.IsProduction">
+            <summary>
+            Check if the enviroment is a production environment
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ADTool.Environment.DataEnvironmentTypeEnum.None">
+            <summary>
+            None type
+            </summary>
+        </member>
+        <member name="F:ADTool.Environment.DataEnvironmentTypeEnum.Local">
+            <summary>
+            Local type
+            </summary>
+        </member>
+        <member name="F:ADTool.Environment.DataEnvironmentTypeEnum.Development">
+            <summary>
+            Development type
+            </summary>
+        </member>
+        <member name="F:ADTool.Environment.DataEnvironmentTypeEnum.Test">
+            <summary>
+            Test type
+            </summary>
+        </member>
+        <member name="F:ADTool.Environment.DataEnvironmentTypeEnum.Preproduction">
+            <summary>
+            Preproduction type
+            </summary>
+        </member>
+        <member name="F:ADTool.Environment.DataEnvironmentTypeEnum.Production">
+            <summary>
+            Production type
+            </summary>
+        </member>
+        <member name="T:ADTool.Environment.EnvironmentManager`1">
+            <summary>
+            class for get environment manager generic
+            </summary>
+        </member>
+        <member name="P:ADTool.Environment.EnvironmentManager`1.DataEnvironmentList">
+            <summary>
+            List of environment
+            </summary>
+        </member>
+        <member name="M:ADTool.Environment.EnvironmentManager`1.#ctor">
+            <summary>
+            private constructor
+            </summary>
+        </member>
+        <member name="M:ADTool.Environment.EnvironmentManager`1.LoadEnvironment(System.String)">
+            <summary>
+            Load all envrionment saved
+            </summary>
+            <param name="environmentsConfigFilePath"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Environment.EnvironmentManager`1.GetEnvironments">
+            <summary>
+            Get All environment
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ADTool.Environment.EnvironmentManager`1.ActivEnvironment" -->
+        <member name="M:ADTool.Environment.EnvironmentManager`1.IsEnvironmentLoaded">
+            <summary>
+            Execute this method for know is data from file config environment has been loaded
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ADTool.CustomFile.FileManager">
+            <summary>
+            Class for manage files
+            </summary>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.#ctor">
+            <summary>
+            Private constructor
+            </summary>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetAssemblyPath">
+            <summary>
+            Obtiene la ruta actual del ensamblado
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetApplicationPath">
+            <summary>
+            Devuelve la ruta de la aplicación
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetNetPath">
+            <summary>
+             Get netowrk path of assembly
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetFilesFromAppPath(System.String)">
+            <summary>
+            Get files from subfolder
+            </summary>
+            <param name="subFolderName"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.AppendToFile(System.String,System.String)">
+            <summary>
+            Append <see cref="T:System.String"/> to file
+            </summary>
+            <param name="pathFile"></param>
+            <param name="msg"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetNetPathMachineIp">
+            <summary>
+            Get network path machine IP
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetFileFromAppPath(System.String)">
+            <summary>
+            Get file from app path
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetFile(System.String)">
+            <summary>
+            Get file from path passed by parameter
+            </summary>
+            <param name="sPathFile"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.ExistsFile(System.String)">
+            <summary>
+            Check if exists file
+            </summary>
+            <param name="sPathFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.SaveTextFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Add text content to file, if not exists file is created
+            </summary>
+            <param name="sPathFile"></param>
+            <param name="sFileContent"></param>
+            <param name="bAppend"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.DeleteFile(System.String)">
+            <summary>
+            Delete file
+            </summary>
+            <param name="sPathFile"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.CompareTwoFiles(System.String,System.String)">
+            <summary>
+            Devuelve TRUE si NO hay diferencias y FALSE si las hay
+            </summary>
+            <param name="file1Path"></param>
+            <param name="file2Path"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.IsValidPath(System.String)">
+            <summary>
+            Check if is valid the path passed by parameter
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.GetMachineName">
+            <summary>
+            Get Machine name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.SaveTextFileInAppPath(System.String,System.String)">
+            <summary>
+            Save text content in file, if file has content, it's overwrote
+            </summary>
+            <param name="fileContent"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ADTool.CustomFile.FileManager.LoadEmbededResource(System.String)">
+            <summary>
+            Load embeded resource
+            </summary>
+            <param name="embbededresourceName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ADTool.Log.ILog.IdLog">
+            <summary>
+            Field to identified a log
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.ILog.Client">
+            <summary>
+            Name user
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.ILog.TaskName">
+            <summary>
+            Name task
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.ILog.Text">
+            <summary>
+            Text log
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.ILog.LogType">
+            <summary>
+            Type log
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.ILog.Exception">
+            <summary>
+            Log exeption information
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.ILog.CreatedAt">
+            <summary>
+            Date created log
+            </summary>
+        </member>
+        <member name="T:ADTool.Log.LogException">
+            <summary>
+            Struct for storage the exception information
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogException.MethodWhereHappened">
+            <summary>
+            Field to know the method that throw the exception
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogException.ClassWhereHappened">
+            <summary>
+            Field to know the class that throw the exception
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogException.ExceptionMessage">
+            <summary>
+            Field to know messge exception
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogException.StackTrace">
+            <summary>
+            Field to know stack trace
+            </summary>
+        </member>
+        <member name="M:ADTool.Log.LogException.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="methodWhereHappened"></param>
+            <param name="classWhereHappened"></param>
+            <param name="exceptionMessage"></param>
+            <param name="stackTrace"></param>
+        </member>
+        <member name="T:ADTool.Log.LogJsonFile">
+            <summary>
+            Class exemple for test the manage class log <see cref="T:ADTool.Log.LogManager`1"/>
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.IdLog">
+            <summary>
+            Field to identified a log
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.Client">
+            <summary>
+            Field to know the client
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.TaskName">
+            <summary>
+            Field to know the task name
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.Text">
+            <summary>
+            Field to know the text message
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.LogType">
+            <summary>
+            Field to know the log type
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.Exception">
+            <summary>
+            Field to know the exception information
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.CreatedAt">
+            <summary>
+            Field to know the date create log
+            </summary>
+        </member>
+        <member name="P:ADTool.Log.LogJsonFile.CustomProperty">
+            <summary>
+            Custom specific property
+            </summary>
+        </member>
+        <member name="M:ADTool.Log.LogJsonFile.#ctor(System.String,System.String,System.String,ADTool.Log.LogType,System.Nullable{ADTool.Log.LogException},System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="client"></param>
+            <param name="taskName"></param>
+            <param name="text"></param>
+            <param name="logType"></param>
+            <param name="exception"></param>
+            <param name="createdAt"></param>
+        </member>
+        <member name="M:ADTool.Log.LogJsonFile.#ctor">
+            <summary>
+            Empty Constructor
+            </summary>
+        </member>
+        <member name="T:ADTool.Log.LogManager`1">
+            <summary>
+            Class for manage all class that implement the Ilog interface.
+            With this class you can Load, Get, Add, And Save your logs.
+            All logs are saved with JSON format.
+            <para></para>
+            In this namespace there's a simple exemple class (<see cref="T:ADTool.Log.LogJsonFile"/>) for use this manage class (<see cref="T:ADTool.Log.LogManager`1"/>)
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ADTool.Log.LogManager`1.DataLogList">
+            <summary>
+            field for storage the all log
+            </summary>
+        </member>
+        <member name="F:ADTool.Log.LogManager`1.pathFileLog">
+            <summary>
+            field to storage the path file log
+            </summary>
+        </member>
+        <member name="M:ADTool.Log.LogManager`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ADTool.Log.LogManager`1.GetLog">
+            <summary>
+            Get all Log
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Log.LogManager`1.AddLog(`0)">
+            <summary>
+            Add log to manager, but it's not save yet, you must execute the <see cref="M:ADTool.Log.LogManager`1.SaveLog"/> method
+            </summary>
+            <param name="newLog"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Log.LogManager`1.LoadLog(System.String)">
+            <summary>
+            Load all log saved in path file passed by parameter
+            </summary>
+            <param name="pathFileLog"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Log.LogManager`1.SaveLog">
+            <summary>
+            Save all log load in file without adding, overwritting all text storaged
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Log.LogManager`1.SaveEmptyLog(System.String)">
+            <summary>
+            Save empty log, is use for create file log if not exist
+            </summary>
+            <param name="pathFileLog"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="F:ADTool.Log.LogType.Error">
+            <summary>
+            Type warning
+            </summary>
+        </member>
+        <member name="F:ADTool.Log.LogType.Warning">
+            <summary>
+            Type warning
+            </summary>
+        </member>
+        <member name="F:ADTool.Log.LogType.Success">
+            <summary>
+            Type success
+            </summary>
+        </member>
+        <member name="T:ADTool.Permutation.Permutation">
+            <summary> 
+            EO: 2016-04-14 
+            Generator of all permutations of an array of anything. 
+            Base on Heap's Algorithm. See: https://en.wikipedia.org/wiki/Heap%27s_algorithm#cite_note-3 
+            </summary> 
+        </member>
+        <member name="M:ADTool.Permutation.Permutation.ForAllPermutation``1(``0[],System.Func{``0[],System.Boolean})">
+            <summary> 
+            Heap's algorithm to find all pmermutations. Non recursive, more efficient. 
+            </summary> 
+            <param name="items">Items to permute in each possible ways</param> 
+            <param name="funcExecuteAndTellIfShouldStop"></param> 
+            <returns>Return true if cancelled</returns> 
+        </member>
+        <member name="M:ADTool.Permutation.Permutation.GetPermutations``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary> 
+            This function is to show a linq way but is far less efficient 
+            From: StackOverflow user: Pengyang : http://stackoverflow.com/questions/756055/listing-all-permutations-of-a-string-integer 
+            </summary> 
+            <typeparam name="T"></typeparam> 
+            <param name="list"></param> 
+            <param name="length"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:ADTool.Permutation.Permutation.Swap``1(``0@,``0@)">
+            <summary> 
+            Swap 2 elements of same type 
+            </summary> 
+            <typeparam name="T"></typeparam> 
+            <param name="a"></param> 
+            <param name="b"></param> 
+        </member>
+        <member name="M:ADTool.Permutation.Permutation.Test">
+            <summary> 
+            Func to show how to call. It does a little test for an array of 4 items. 
+            </summary> 
+        </member>
+        <member name="T:ADTool.AppSetting.AppSetting">
+            <summary>
+            This class is used for get value or section of type System.Configuration.NameValueSectionHandler inside of config file.
+            </summary>
+        </member>
+        <member name="M:ADTool.AppSetting.AppSetting.GetSetting(System.String)">
+            <summary>
+            Get value of key setting
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.AppSetting.AppSetting.GetAllSettings(System.String)">
+            <summary>
+            Get section of config file
+            </summary>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ADTool.Serializer.JsonSerializer">
+            <summary>
+            Clase para la serialización/deserialización en JSON
+            </summary>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.DeserializeToJObj(System.String)">
+            <summary>
+            Deserialize to <see cref="T:Newtonsoft.Json.Linq.JObject"/>.
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+            <exception cref="T:Newtonsoft.Json.JsonReaderException"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.DeserializeToExpandoObject(System.String)">
+            <summary>
+            Deserialize to dynamic object
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.DeserializeToDynamic(System.String)">
+            <summary>
+            Deserialize to dynamic object.
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserialize to T object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.Deserialize(System.String,System.Type)">
+            <summary>
+            Deserialize to especific object.
+            </summary>
+            <param name="json"></param>
+            <param name="typeObj"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.ConvertDataSetToObj(System.Data.DataSet,System.Type)">
+            <summary>
+            Convert <see cref="T:System.Data.DataSet"/> on especific object. 
+            </summary>
+            <param name="ds"></param>
+            <param name="typeObj"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.ConvertDataSetToObj``1(System.Data.DataSet)">
+            <summary>
+            Convert <see cref="T:System.Data.DataSet"/> on especific object. 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ds"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.GetEntity``2(System.Data.DataSet)">
+            <summary>
+            Convierte un DataSet en una entidad de tipo "T1" con una lista de entidades hijas de tipo "T2"
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="ds"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.GetEntity``2(System.Data.DataSet,System.Type)">
+            <summary>
+            Get Entity
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="ds"></param>
+            <param name="type"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.GetEntity``1(System.Data.DataTable)">
+            <summary>
+            Dado un DataTable, devuelve una lista de entidades de tipo "T"
+            </summary>
+            <typeparam name="T">El tipo de la lista de entidades</typeparam>
+            <param name="dt">El DataTable de datos de entrada</param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.GetEntity``1(System.Data.DataSet)">
+            <summary>
+            Get Entity
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.GetFirstEntity``1(System.Data.DataTable)">
+            <summary>
+            Dado un DataTable devuelve una entidad de tipo T, que corresponde al primer registro de la tabla
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.JsonSerializer.Serialize(System.Object)">
+            <summary>
+            Serializa un objeto
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ADTool.Serializer.XmlSerializer">
+            <summary>
+            Clase para serialización/deserialización XML
+            </summary>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.GetObjectDeserialized(System.Type,System.String)">
+            <summary>
+            Función que recibirá un objeto (que servirá como plantilla) y un string en formato XML
+            La función, intentará serializar el string XML en el objeto pasado por parámetros y retornarlo
+            </summary>
+            <param name="oToDeserializeObjectoType">Objeto plantilla donde se serializarán los datos</param>
+            <param name="xmlString">String con los datos en XML</param>
+            <returns>Retornará el objeto serializado</returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.GetObjectDeserialized``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xmlString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.Serialize(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="oObjetoToSerialize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.Serialize(System.Object,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oObjetoToSerialize"></param>
+            <param name="omitXmlDeclaration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.Serialize(System.Object,System.Text.Encoding)">
+            <summary>
+            
+            </summary>
+            <param name="oObjetoToSerialize"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.Serialize(System.Object,System.Boolean,System.Text.Encoding)">
+            <summary>
+            
+            </summary>
+            <param name="oObjetoToSerialize"></param>
+            <param name="omitXmlDeclaration"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.Serialize(System.Object,System.Xml.XmlWriterSettings)">
+            <summary>
+            
+            </summary>
+            <param name="oObjetoToSerialize"></param>
+            <param name="xmlWriterSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.SerializeFromDyn(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.GetCData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dataString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.GetFirstXmlChild(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.XmlSerializer.CreateCData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ADTool.Serializer.DynamicHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ADTool.Serializer.DynamicHelper._writeTypes">
+            
+             Defines the simple types that is directly writeable to XML.
+        </member>
+        <member name="M:ADTool.Serializer.DynamicHelper.IsSimpleType(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Serializer.DynamicHelper.ToXml(System.Object)">
+            
+        </member>
+        <member name="M:ADTool.Serializer.DynamicHelper.ToXml(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

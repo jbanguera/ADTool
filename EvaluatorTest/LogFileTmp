@@ -1,0 +1,33 @@
+{
+	"DataLogList": [{
+			"IdLog": 0,
+			"Client": "Jhon",
+			"TaskName": "Alta productos",
+			"Text": "No se ha podido dar de alta el producto 12309, por fallo de conexión a la base de datos de Alfa",
+			"LogType": 2,
+			"Exception": {
+				"MethodWhereHappened": "Void Trabaja(Int32)",
+				"ClassWhereHappened": "Product",
+				"ExceptionMessage": "Error Syntax on DB sentences",
+				"StackTrace": ".....:línea 67"
+			},
+			"CreatedAt": "15/12/2017 10:58:00",
+			"CustomProperty": 0
+		}, {
+			"IdLog": 0,
+			"Client": "Jairo",
+			"TaskName": "Alta productos",
+			"Text": "No se ha podido dar de alta el producto 12309, por fallo de conexión a la base de datos de Alfa",
+			"LogType": 1,
+			"Exception": {
+				"MethodWhereHappened": "Void Trabaja(Int32)",
+				"ClassWhereHappened": "Product",
+				"ExceptionMessage": "Error Syntax on DB sentences",
+				"StackTrace": ".....:línea 67"
+			},
+			"CreatedAt": "15/12/2017 10:58:00",
+			"CustomProperty": 0
+		}
+	]
+	"LogCount": 0
+}

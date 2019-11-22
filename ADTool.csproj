@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A4B44FC-731C-49E4-8592-9829717427C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ADTool</RootNamespace>
+    <AssemblyName>ADTool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ADTool.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ADTool.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\ADWebCustomerDocuments\ADWebCustomerDocumentsWindowsServices\packages\Dapper.1.50.7\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP, Version=23.0.0.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\ADWebCustomerDocuments\ADWebCustomerDocumentsWindowsServices\packages\FluentFTP.23.0.0\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\ADManageWebProduct\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataConnection.cs" />
+    <Compile Include="Data\DataConnectionTypeProviderEnum.cs" />
+    <Compile Include="Data\IDataConnection.cs" />
+    <Compile Include="Encryption\CryptLib.cs" />
+    <Compile Include="Environment\IEnvironment.cs" />
+    <Compile Include="Environment\EnvironmentTest.cs" />
+    <Compile Include="Data\DapperClient\DapperManager.cs" />
+    <Compile Include="Data\DapperClient\DapperModel.cs" />
+    <Compile Include="Data\DapperClient\DapperSimpleQuery.cs" />
+    <Compile Include="Environment\DataEnvironmentTypeEnum.cs" />
+    <Compile Include="Environment\EnvironmentManager.cs" />
+    <Compile Include="CustomFile\FileManager.cs" />
+    <Compile Include="Ftp\FtpClient\FtpClient.cs" />
+    <Compile Include="Log\ILog.cs" />
+    <Compile Include="Log\LogExceptionStruct.cs" />
+    <Compile Include="Log\LogJsonFile.cs" />
+    <Compile Include="Log\LogManager.cs" />
+    <Compile Include="Log\LogTypeEnum.cs" />
+    <Compile Include="Permutation\Permutations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppSetting\AppSetting.cs" />
+    <Compile Include="Serializer\JsonSerializer.cs" />
+    <Compile Include="Serializer\XmlSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Environment\envTest.cfg" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

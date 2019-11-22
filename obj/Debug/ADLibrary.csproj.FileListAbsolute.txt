@@ -1,0 +1,9 @@
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\bin\Debug\ADLibrary.dll
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\bin\Debug\ADLibrary.pdb
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\obj\Debug\ADLibrary.csprojAssemblyReference.cache
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\obj\Debug\ADLibrary.csproj.CoreCompileInputs.cache
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\obj\Debug\ADLibrary.dll
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\obj\Debug\ADLibrary.pdb
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\bin\Debug\Dapper.dll
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\bin\Debug\Dapper.xml
+C:\GiTAlfa\GiT_Visual_Alfa\ADLibrary\ADLibrary\obj\Debug\ADLibrary.csproj.CopyComplete
