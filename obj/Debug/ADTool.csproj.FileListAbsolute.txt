@@ -39,7 +39,7 @@ C:\Users\JMarquinez\Proyectos\ADTool\bin\Debug\Dapper.xml
 C:\Users\JMarquinez\Proyectos\ADTool\bin\Debug\FluentFTP.xml
 C:\Users\JMarquinez\Proyectos\ADTool\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\JMarquinez\Proyectos\ADTool\bin\Debug\Newtonsoft.Json.xml
-C:\Users\JMarquinez\Proyectos\ADTool\obj\Debug\ADTool.csprojAssemblyReference.cache
 C:\Users\JMarquinez\Proyectos\ADTool\obj\Debug\ADTool.csproj.CopyComplete
 C:\Users\JMarquinez\Proyectos\ADTool\obj\Debug\ADTool.dll
 C:\Users\JMarquinez\Proyectos\ADTool\obj\Debug\ADTool.pdb
+C:\Users\JMarquinez\Proyectos\ADTool\obj\Debug\ADTool.csprojAssemblyReference.cache

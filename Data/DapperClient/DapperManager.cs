@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace ADTool.Data.DapperClient
 {
-    public class DapperManager: IDisposable
+    /// <summary>
+    /// Class to manage de data base resources
+    /// </summary>
+    public class DapperManager
     {
         #region - P R O P E R T I E S
         private bool disposed = false;
@@ -25,7 +28,8 @@ namespace ADTool.Data.DapperClient
         }
 
         #endregion
-        #region CHECK CONNECTION
+
+        #region - C H E C K C O N N E C T I O N
         /// <summary>
         /// 
         /// </summary>
@@ -267,63 +271,6 @@ namespace ADTool.Data.DapperClient
         }
         #endregion
 
-        #region DISPOSE METHODS
-        /// <summary>
-        /// DatabaseController Destructor
-        /// </summary>
-        ~DapperManager()
-        {
-            Dispose(false);
-        }
-
-        /// <summary>
-        /// DatabaseController Destructor
-        /// </summary>
-        /// <summary>
-        /// Dispose the DDBB.
-        /// </summary>
-        public void Dispose()
-        {
-            Dispose(true);
-            /* Take yourself off the Finalization queue to prevent finalization code
-             * for this object from executing a second time.
-             */
-            GC.SuppressFinalize(this);
-        }
-
-        /* Dispose(bool disposing) executes in two distinct scenarios.
-         * If disposing equals true, the method has been called directly or indirectly
-         * by a user's code. Managed and unmanaged resources can be disposed.
-         * If disposing equals false, the method has been called by the runtime from
-         * inside the finalizer and you should not reference other objects. Only
-         * unmanaged resources can be disposed.
-         */
-        /// <summary>
-        /// Virtual dispose the DDBB.
-        /// </summary>
-        protected virtual void Dispose(bool disposing)
-        {
-            // Check to see if Dispose has already been called.
-            if (!this.disposed)
-            {
-                // If disposing equals true, dispose all managed
-                // and unmanaged resources.
-                if (disposing)
-                {
-                    // Dispose managed resources.
-                    
-                }
-                /* Release unmanaged resources. If disposing is false, only the following code
-                 * is executed. Note that this is not thread safe. Another thread could start
-                 * disposing the object after the managed resources are disposed, but before
-                 * the disposed flag is set to true. If thread safety is necessary, it must be
-                 * implemented by the client.
-                 */
-            }
-            disposed = true;
-        }
-        #endregion
-
         #region QUERY MULTIPLE METHODS
         /// <summary>
         /// Execute many diference sql statement on DB. 
@@ -387,7 +334,7 @@ namespace ADTool.Data.DapperClient
         }
         #endregion
 
-        #region MULTI RESULT
+        #region MULTI MAPPING
         /// <summary>
         /// Query method can execute a query and map the result to a strongly typed list with a one to many relations or none to one relations.
         /// </summary>
@@ -441,12 +388,12 @@ namespace ADTool.Data.DapperClient
         ///     .ToList();
         /// </code>
         /// </example>
-        public IEnumerable<TReturn> Query<TFirst, TSecond, TReturn>(DapperModel dapperModel, string sql, Func<TFirst, TSecond, TReturn> map, object param = null, bool buffered = false, string splitOn = null, CommandType? commandType = null)
+        public IEnumerable<TReturn> Query<TFirst, TSecond, TReturn>(DapperModel dapperModel, string sql, Func<TFirst, TSecond, TReturn> map, object param = null, string splitOn = null)
         {
             IEnumerable<TReturn> result = null;
             try
             {
-                result = dapperModel.Query<TFirst, TSecond, TReturn>(sql, map, param, buffered, splitOn, commandType);
+                result = dapperModel.Query<TFirst, TSecond, TReturn>(sql, map, param, splitOn);
             }
             catch (Exception ex)
             {

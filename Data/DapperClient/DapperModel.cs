@@ -17,7 +17,6 @@ namespace ADTool.Data.DapperClient
     {
         #region - P R O P E R T I E S
         private bool disposed = false;
-        //private SqlConnection connection;
         private IDbConnection connection;
         private string connectionString = String.Empty;
         #endregion
@@ -427,6 +426,8 @@ namespace ADTool.Data.DapperClient
                             throw new Exception("Has been occurred an error check the internal exception for more details.", ex);
                         }
                         connection.Dispose();
+                        connection = null;
+                        ConnectionString = String.Empty;
                     }
                 }
                 /* Release unmanaged resources. If disposing is false, only the following code
@@ -514,7 +515,7 @@ namespace ADTool.Data.DapperClient
 
         #endregion
 
-        #region MULTI RESULT
+        #region MULTI MAPPING
         /// <summary>
         /// Query method can execute a query and map the result to a strongly typed list with a one to many relations or none to one relations.
         /// </summary>
@@ -567,7 +568,7 @@ namespace ADTool.Data.DapperClient
         ///     .ToList();
         /// </code>
         /// </example>
-        internal IEnumerable<TReturn> Query<TFirst,TSecond, TReturn>(string sql, Func<TFirst, TSecond, TReturn> map, object param = null, bool buffered = true, string splitOn=null, CommandType? commandType = null) {
+        internal IEnumerable<TReturn> Query<TFirst,TSecond, TReturn>(string sql, Func<TFirst, TSecond, TReturn> map, object param = null, string splitOn = null) {
             
             IEnumerable<TReturn> result = null;
             using (connection)
@@ -577,9 +578,11 @@ namespace ADTool.Data.DapperClient
                     CheckAndSetConnectionStringForConnection();
                     try
                     {
-                        //connection.Open();
                         Open();
-                        result = connection.Query<TFirst, TSecond, TReturn>(sql, map, param, buffered: buffered, splitOn: splitOn, commandType: commandType);
+                        if(splitOn == null)
+                            result = connection.Query<TFirst, TSecond, TReturn>(sql, map, param);
+                        else
+                            result = connection.Query<TFirst, TSecond, TReturn>(sql, map, param, splitOn: splitOn);
                     }
                     catch (Exception ex)
                     {

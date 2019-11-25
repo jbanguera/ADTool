@@ -175,6 +175,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:ADTool.Data.DapperClient.DapperManager">
+            <summary>
+            Class to manage de data base resources
+            </summary>
+        </member>
         <member name="M:ADTool.Data.DapperClient.DapperManager.#ctor">
             <summary>
             Constructor <see langword="class " cref="T:ADTool.Data.DapperClient.DapperManager"/>
@@ -284,24 +289,6 @@
             <returns></returns>
             <exception cref="T:System.Exception"></exception>
         </member>
-        <member name="M:ADTool.Data.DapperClient.DapperManager.Finalize">
-            <summary>
-            DatabaseController Destructor
-            </summary>
-        </member>
-        <member name="M:ADTool.Data.DapperClient.DapperManager.Dispose">
-            <summary>
-            DatabaseController Destructor
-            </summary>
-            <summary>
-            Dispose the DDBB.
-            </summary>
-        </member>
-        <member name="M:ADTool.Data.DapperClient.DapperManager.Dispose(System.Boolean)">
-            <summary>
-            Virtual dispose the DDBB.
-            </summary>
-        </member>
         <member name="M:ADTool.Data.DapperClient.DapperManager.QueryMultiple(ADTool.Data.DapperClient.DapperModel,System.Collections.Generic.List{System.String},System.Object)">
             <summary>
             Execute many diference sql statement on DB. 
@@ -319,7 +306,7 @@
             <returns></returns>
             <exception cref="T:System.Data.SqlClient.SqlException"></exception>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ADTool.Data.DapperClient.DapperManager.Query``3(ADTool.Data.DapperClient.DapperModel,System.String,System.Func{``0,``1,``2},System.Object,System.Boolean,System.String,System.Nullable{System.Data.CommandType})" -->
+        <!-- Badly formed XML comment ignored for member "M:ADTool.Data.DapperClient.DapperManager.Query``3(ADTool.Data.DapperClient.DapperModel,System.String,System.Func{``0,``1,``2},System.Object,System.String)" -->
         <member name="M:ADTool.Data.DapperClient.DapperManager.BuildConnectionString(System.String,System.String,System.String)">
             <summary>
             Build the DDBB connection string BD.
@@ -497,7 +484,7 @@
             <returns></returns>
             <exception cref="T:System.Data.SqlClient.SqlException"></exception>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ADTool.Data.DapperClient.DapperModel.Query``3(System.String,System.Func{``0,``1,``2},System.Object,System.Boolean,System.String,System.Nullable{System.Data.CommandType})" -->
+        <!-- Badly formed XML comment ignored for member "M:ADTool.Data.DapperClient.DapperModel.Query``3(System.String,System.Func{``0,``1,``2},System.Object,System.String)" -->
         <member name="M:ADTool.Data.DapperClient.DapperModel.State">
             <summary>
             Get state of DB connection.

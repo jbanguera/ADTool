@@ -43,11 +43,9 @@ C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\Newtonsoft.Json.dll
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\FluentFTP.dll
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\Dapper.dll
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\MySql.Data.dll
-C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\Google.Protobuf.dll
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\ADTool.pdb
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\ADTool.xml
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\Newtonsoft.Json.pdb
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\Newtonsoft.Json.xml
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\FluentFTP.xml
 C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\Dapper.xml
-C:\Users\JMarquinez\Proyectos\ADTool\EvaluatorTest\MySql.Data.xml
