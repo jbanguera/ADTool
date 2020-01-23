@@ -64,15 +64,18 @@
             Value Persist Security
             </summary>
         </member>
-        <member name="P:ADTool.Data.DataConnection.ConnectionStringForSql">
+        <member name="M:ADTool.Data.DataConnection.GetConnectionString(ADTool.Data.DataConnectionTypeProviderEnum)">
             <summary>
-            Value Connection String
+            Get connection by tyipe provider
             </summary>
+            <param name="providerType"></param>
+            <returns></returns>
         </member>
-        <member name="P:ADTool.Data.DataConnection.ConnectionStringForMySql">
+        <member name="M:ADTool.Data.DataConnection.GetConnectionStringForSqlite">
             <summary>
-            Value Connection String
+            Get the connection For SQLite
             </summary>
+            <returns></returns>
         </member>
         <member name="M:ADTool.Data.DataConnection.GetConnectionStringForSql">
             <summary>
@@ -90,12 +93,17 @@
         </member>
         <member name="F:ADTool.Data.DataConnectionTypeProviderEnum.MSSQL">
             <summary>
-            Identify to MySQL Server provider
+            Identify to SQL Server provider
             </summary>
         </member>
         <member name="F:ADTool.Data.DataConnectionTypeProviderEnum.MYSQL">
             <summary>
-            /// Identify to SQL Server provider
+            Identify to MySQL Server provider
+            </summary>
+        </member>
+        <member name="F:ADTool.Data.DataConnectionTypeProviderEnum.SQLITE">
+            <summary>
+            Identify to SQLite provider
             </summary>
         </member>
         <member name="P:ADTool.Data.IDataConnection.ConnectionName">
@@ -153,16 +161,6 @@
             Field to know persist security
             </summary>
         </member>
-        <member name="P:ADTool.Data.IDataConnection.ConnectionStringForSql">
-            <summary>
-            Field to know the connection string for SQL Server
-            </summary>
-        </member>
-        <member name="P:ADTool.Data.IDataConnection.ConnectionStringForMySql">
-            <summary>
-            Field to know the connection string for MySQL
-            </summary>
-        </member>
         <member name="M:ADTool.Data.IDataConnection.GetConnectionStringForSql">
             <summary>
             Get the connection for SQL Server
@@ -172,6 +170,12 @@
         <member name="M:ADTool.Data.IDataConnection.GetConnectionStringForMySql">
             <summary>
             Get the connection for MYSQL Server
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ADTool.Data.IDataConnection.GetConnectionStringForSqlite">
+            <summary>
+            Get the connection For SQLite
             </summary>
             <returns></returns>
         </member>

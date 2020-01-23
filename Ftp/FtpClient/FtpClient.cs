@@ -93,7 +93,7 @@ namespace ADTool.Ftp.FtpClient
         public void UploadFile(string sourcePath, string destinationPath)
         {
             _FTPClient.RetryAttempts = 3;
-            _FTPClient.UploadFile(sourcePath, destinationPath, FtpExists.Overwrite, false, FtpVerify.Retry);
+            _FTPClient.UploadFile(sourcePath, destinationPath, FtpRemoteExists.Overwrite, false, FtpVerify.Retry);
         }
 
         /// <summary>

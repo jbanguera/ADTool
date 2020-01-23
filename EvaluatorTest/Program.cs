@@ -26,9 +26,11 @@ namespace EvaluatorTest
             logManager.SaveLog();
             
              */
+            
 
-            var pass = new CryptLib().Encrypt("CHLfYKzLRqRq7kJ");
-
+            var connDec = new CryptLib().Decrypt("B9jejyAzaRNYBUUQMcVYK1JfaTafPiMiGWFJaXo1t2xdRG6futk7bHrxd8uCoY/Sr/gsoJ9DysqB6SJnAjExZmy7CpyiuSBkbJ6HM45WYZWiYR90WBkG56HUAUzyluy7059o80xoEtl2oc8SXQpjSQ==");
+            var connEnc = new CryptLib().Encrypt("Data Source=localhost; Initial Catalog=ProjectControlTime; Integrated Security=false; user id=sa; password=1234;");
+            
             EnvironmentManager<EnvironmentTest> envManager = new EnvironmentManager<EnvironmentTest>();
             envManager.LoadEnvironment(Path.Combine(FileManager.GetApplicationPath(), "env.cfg"));
             EnvironmentTest envActive = envManager.ActivEnvironment();

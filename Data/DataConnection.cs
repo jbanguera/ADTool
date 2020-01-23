@@ -63,30 +63,28 @@ namespace ADTool.Data
         /// Value Persist Security
         /// </summary>
         public string PersistSecurity { get; set; }
-
-        /// <summary>
-        /// Value Connection String
-        /// </summary>
-        public string ConnectionStringForSql
-        {
-            get { return GetConnectionStringForSql(); }
-        }
-
-        /// <summary>
-        /// Value Connection String
-        /// </summary>
-        public string ConnectionStringForMySql
-        {
-            get { return GetConnectionStringForMySql(); }
-        }
         #endregion
 
         #region - M E T H O D S
-
+        /// <summary>
+        /// Get connection by tyipe provider
+        /// </summary>
+        /// <param name="providerType"></param>
+        /// <returns></returns>
         public string GetConnectionString(DataConnectionTypeProviderEnum providerType)
         {
             return providerType == DataConnectionTypeProviderEnum.MSSQL ? GetConnectionStringForSql() :
-                    providerType == DataConnectionTypeProviderEnum.MYSQL ? GetConnectionStringForMySql() : null;
+                    providerType == DataConnectionTypeProviderEnum.MYSQL ? GetConnectionStringForMySql() : 
+                    providerType == DataConnectionTypeProviderEnum.SQLITE ? GetConnectionStringForSqlite() : null;
+        }
+
+        /// <summary>
+        /// Get the connection For SQLite
+        /// </summary>
+        /// <returns></returns>
+        public string GetConnectionStringForSqlite()
+        {
+            return $"Data Source={this.ServerName};Version=3;";
         }
 
         /// <summary>
@@ -122,6 +120,7 @@ namespace ADTool.Data
             }
             catch (Exception ex) { throw ex; }
         }
+
         #endregion
     }
 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using ADTool.Data;
 using MySql.Data.MySqlClient;
+using System.Data.SQLite;
 
 namespace ADTool.Data.DapperClient
 {
@@ -53,6 +54,9 @@ namespace ADTool.Data.DapperClient
                     break;
                 case DataConnectionTypeProviderEnum.MYSQL:
                     connection = new MySqlConnection { ConnectionString = this.connectionString = connectionString };
+                    break;
+                case DataConnectionTypeProviderEnum.SQLITE:
+                    connection = new SQLiteConnection { ConnectionString = this.connectionString = connectionString };
                     break;
             }
         }

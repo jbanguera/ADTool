@@ -58,16 +58,6 @@ namespace ADTool.Data
         /// Field to know persist security
         /// </summary>
         string PersistSecurity { get; set; }
-
-        /// <summary>
-        /// Field to know the connection string for SQL Server
-        /// </summary>
-        string ConnectionStringForSql { get; }
-
-        /// <summary>
-        /// Field to know the connection string for MySQL
-        /// </summary>
-        string ConnectionStringForMySql { get; }
         #endregion
 
         #region - M E T H O D S
@@ -82,6 +72,12 @@ namespace ADTool.Data
         /// </summary>
         /// <returns></returns>
         string GetConnectionStringForMySql();
+
+        /// <summary>
+        /// Get the connection For SQLite
+        /// </summary>
+        /// <returns></returns>
+        string GetConnectionStringForSqlite();
         #endregion
     }
 }
